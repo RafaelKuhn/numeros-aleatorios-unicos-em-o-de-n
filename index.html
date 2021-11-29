@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ex 1 complexidade</title>
+</head>
+<body>
+
+  <h2>Input:</h2>
+  
+  <label for="amostragens">
+    amostragens:
+  </label>
+  <input label="qtd amostragens" type="number" min="1" id="amostragens" value="100"></input>
+  
+
+  <label for="tamanhoVetor">
+    tamanho do vetor
+  </label>
+  <input type="number" min="1" id="tamanhoVetor" value="1000"></input>
+
+
+  <input type="button" onclick="() => process()" value="Tentar"></input>
+
+
+
+  <div class="hidden" id="outputs">
+
+    <h2>Output:</h2>
+    
+    <p>Número de tentativas erradas (total): <span id="qtdErradas"></span></p>
+    <br>
+    <p>Menor tempo: <span id="menorErros"></span></p>
+    <br>
+    <p>Maior tempo: <span id="maiorErros"></span></p>
+    <br>
+    <p>Média de tempo: <span id="mediaTempo"></span> ms</p>
+    
+    <div style="width: 500px; height: 500px;">
+      <canvas id="chart"></canvas>
+    </div>
+
+
+  </div>
+
+
+</body>
+
+
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="index.js"></script>
+
+</html>
